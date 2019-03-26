@@ -15,9 +15,10 @@
 </ul>
 
 
-
-
-
-
 <%=button_to 'all da events', events_path, method: :get %>
 <%=button_to 'all da sights', sights_path, method: :get %>
+<%= button_to 'Logout', logout_path, method: :delete %>
+
+<% if current_user.id == @user.id %>
+  <%= button_to 'Delete this Account', user_path(@user), method: :delete, data: { confirm: 'are you sure?' } %>
+<% end %>

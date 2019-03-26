@@ -2,5 +2,8 @@
   <% @sights.each do |sight|%>
   <li><%=link_to sight.name, sight%></li>
   <% end%>
-
 </ul>
+<%= button_to 'have a new favorite?', new_sight_path, method: :get%>
+
+
+<%= link_to 'Back', user_path(current_user) %>

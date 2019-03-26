@@ -7,8 +7,6 @@ class UsersController < ApplicationController
 
   def show
     set_user
-    # @sights = Sight.all
-    # @events = Event.all
   end
 
   def new
@@ -19,17 +17,11 @@ class UsersController < ApplicationController
     set_user
   end
 
-  def create_favorite
-
-  end
-
   def create
     @user = User.create(user_params)
     session[:user_id] = @user.id
     redirect_to @user
   end
-
-
 
 
   def update
@@ -41,6 +33,8 @@ class UsersController < ApplicationController
   def destroy
     set_user
     @user.destroy
+    flash[:notice] = 'You deleted your account'
+    redirect_to new_user_path
   end
 
 
@@ -51,6 +45,5 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :password)
-
     end
 end

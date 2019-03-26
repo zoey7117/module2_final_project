@@ -1,0 +1,6 @@
+<ul>
+  <% @sight_funds.each do |sight_fund| %>
+    <li> <%= link_to sight_fund.name, sight_fund %>
+    <%= sight_fund.sight.name %> </li>
+  <% end %>
+</ul>

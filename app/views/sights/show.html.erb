@@ -1,3 +1,7 @@
-<% @user.sights.each do |user_sight| %>
-<%= user_sight.name %>
-<%end %>
+<h3>single sight</h3>
+
+<li>sight name: <%= @sight.name %></li>
+<li>sight location: <%= @sight.location %></li>
+
+
+<%= link_to 'add to favorites', user_path(current_user) %>

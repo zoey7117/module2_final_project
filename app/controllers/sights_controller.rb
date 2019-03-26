@@ -16,7 +16,7 @@ class SightsController < ApplicationController
   # GET /sights/new
   def new
     @sight = Sight.new
-    @users = User.all
+
   end
 
   # GET /sights/1/edit
@@ -27,8 +27,12 @@ class SightsController < ApplicationController
   # POST /sights
   def create
     @sight = Sight.create(sight_params)
-    byebug
-    redirect_to users_path(@sight)
+    if @sight.valid?
+      redirect_to sights_path
+    else
+      flash[:notice] = @sight.errors.full_messages
+      redirect_to new_sight_path
+    end
   end
 
 

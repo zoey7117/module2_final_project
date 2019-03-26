@@ -7,7 +7,8 @@ class UsersController < ApplicationController
 
   def show
     set_user
-    @sights = Sight.all
+    # @sights = Sight.all
+    # @events = Event.all
   end
 
   def new
@@ -18,11 +19,18 @@ class UsersController < ApplicationController
     set_user
   end
 
+  def create_favorite
+
+  end
+
   def create
     @user = User.create(user_params)
     session[:user_id] = @user.id
     redirect_to @user
   end
+
+
+
 
   def update
     set_user
@@ -43,7 +51,6 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :password)
-      # params.require(:user).permit(:name, :password_digest)
 
     end
 end

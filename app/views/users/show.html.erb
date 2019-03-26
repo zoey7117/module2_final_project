@@ -1,11 +1,23 @@
 
-<h3>  <%= @user.name %>'s favorite list</h3>
+<h3> hi <%= @user.name %>!</h3>
 
+<h4>Your favorite sights</h4>
 <ul>
-
   <% @user.sights.each do |user_sight| %>
   <li><%= user_sight.name %></li>
   <%end %>
 </ul>
+<h4>Your upcoming events</h4>
+<ul>
+  <% @user.events.each do |user_event| %>
+  <li><%= user_event.name %></li>
+  <%end %>
+</ul>
 
-<%=link_to 'add a new favorite', new_sight_path %>
+
+
+
+
+
+<%=button_to 'all da events', events_path, method: :get %>
+<%=button_to 'all da sights', sights_path, method: :get %>

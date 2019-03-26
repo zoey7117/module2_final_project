@@ -2,6 +2,7 @@
 
 <li>sight name: <%= @sight.name %></li>
 <li>sight location: <%= @sight.location %></li>
+<% @favorite %>
 
 
 <%= link_to 'add to favorites', user_path(current_user) %>

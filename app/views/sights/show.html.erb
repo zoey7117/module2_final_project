@@ -1,14 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @sight.name %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @sight.location %>
-</p>
-
-<%= link_to 'Edit', edit_sight_path(@sight) %> |
-<%= link_to 'Back', sights_path %>
+<% @user.sights.each do |user_sight| %>
+<%= user_sight.name %>
+<%end %>

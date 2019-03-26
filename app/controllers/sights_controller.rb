@@ -8,6 +8,9 @@ class SightsController < ApplicationController
   # GET /sights/1
   def show
     set_sight
+    @users = User.all
+
+
   end
 
   # GET /sights/new
@@ -23,10 +26,9 @@ class SightsController < ApplicationController
 
   # POST /sights
   def create
-    @sight = Sight.new(sight_params)
-
-
-
+    @sight = Sight.create(sight_params)
+    byebug
+    redirect_to users_path(@sight)
   end
 
 

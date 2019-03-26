@@ -9,8 +9,7 @@ class SightsController < ApplicationController
   def show
     set_sight
     @users = User.all
-
-
+    @favorite = Favorite.create(user_id: current_user.id, sight_id: set_sight.id)
   end
 
   # GET /sights/new

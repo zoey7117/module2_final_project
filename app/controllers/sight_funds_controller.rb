@@ -1,0 +1,2 @@
+class SightFundsController < ApplicationController
+end

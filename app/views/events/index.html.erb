@@ -1,0 +1,6 @@
+<ul>
+  <% @events.each do |event| %>
+    <li> <%= link_to event.name, event %>
+    <%= event.sight.name %> </li>
+  <% end %>
+</ul>

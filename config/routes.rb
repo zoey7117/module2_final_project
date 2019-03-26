@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :donations
+  resources :sight_funds
   resources :appointments
   resources :events
   resources :favorites

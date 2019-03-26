@@ -7,15 +7,18 @@ class SightsController < ApplicationController
 
   # GET /sights/1
   def show
+    set_sight
   end
 
   # GET /sights/new
   def new
     @sight = Sight.new
+    @users = User.all
   end
 
   # GET /sights/1/edit
   def edit
+    set_sight
   end
 
   # POST /sights
@@ -28,11 +31,13 @@ class SightsController < ApplicationController
 
 
   def update
+    set_sight
 
   end
 
 
   def destroy
+    set_sight
     @sight.destroy
 
   end

@@ -3,6 +3,8 @@ class User < ApplicationRecord
 
   has_many :appointments
   has_many :favorites
+  has_many :donations
+  has_many :sight_funds, through: :donations
   has_many :events, through: :appointments
   has_many :sights, through: :favorites
 

@@ -13,6 +13,13 @@
   <li><%= user_event.name %></li>
   <%end %>
 </ul>
+<h4>Your site funds</h4>
+<ul>
+  <% @user.sight_funds.each do |sight_fund| %>
+  <li><%= sight_fund.sight.name %></li>
+  <li><%= sight_fund.donation.amount %></li>
+  <%end %>
+</ul>
 
 
 <%=button_to 'all da events', events_path, method: :get %>
@@ -22,3 +29,9 @@
 <% if current_user.id == @user.id %>
   <%= button_to 'Delete this Account', user_path(@user), method: :delete, data: { confirm: 'are you sure?' } %>
 <% end %>
+
+
+
+
+
+<%=button_to 'donate to an ongoing project', sight_funds_path, method: :get%>

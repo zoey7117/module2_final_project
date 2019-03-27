@@ -3,13 +3,7 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# u1 = User.create(name: "nate", password_digest: "123456")
-# u2 = User.create(name: "akram", password_digest: "123456")
-# u3 = User.create(name: "kate", password_digest: "123456")
-# u4 = User.create(name: "nicky", password_digest: "123456")
-# u5 = User.create(name: "richard", password_digest: "123456")
+
 
 s1 = Sight.create(name: "Pandora Garden",location: "16th Street and 10th Avenue", description: '')
 s2 = Sight.create(name: "Washington Grasslands & Woodland Edge", location: "13th Street", description: 'With a bold mix of prairie grasses, like little bluestem and switchgrass, and sun-loving perennials like coneflower and compass plant, the Washington Grasslands provide a striking transition from the trees and shrubbery of the Gansevoort Woodland. Moving north, and into the shade of surrounding buildings, the Woodland Edge is home to shade-tolerant grasses, perennials, and woody species like native chokecherry and early-blooming witch hazel.')
@@ -31,3 +25,8 @@ e2 = Event.create(name: "High Line Hat Party", date: "6/13/19", time: "8", sight
 e3 = Event.create(name: "Mooncake Collective", date: "7/17/19", time: "8", sight_id: 3, description: 'Drawing from fireside storytelling, Chinese opera, and shadow puppetry, MOONCAKE COLLECTIVE presents Twice the Moon, a site specific performance. Attend this intimate, transformative experience of tender resistance and rebellion.', location:'On the High Line at 14th Street')
 e4 = Event.create(name: "Out of Line: Antonio Ramos", date: "6/19/19", time: "8", sight_id: 4, description: 'Antonio Ramos presents No Agenda Genda, a sci-fi piece of interactive dance theater dedicated to the legacy and memory of queer icons and movement-makers. Inspired by their fierce commitment to protect their communities, regardless of societal alienation and consequence, No Agenda Genda uses emotionally-layered movement and audience participation to pay homage to the 50th anniversary of the Stonewall Riots.', location: 'On the High Line at the Spur at 30th Street and 10th Avenue')
 e5 = Event.create(name: "Out of Line: A.R.M", date: "8/14/19", time: "8", sight_id: 5, description: 'A feverish choral arrangement of amplified voices emanates from a sculpture not of marble, but of flowing red water. In A.R.M.’s anti-monument, non-memorial performance Blood Fountain, vocalists interconnected by fetish gear, sports equipment, and medical supplies harmonize queer club hits to unearth queer history, to make us remember the ongoing HIV/AIDS crisis.', location:'On the High Line at the Spur at 30th Street and 10th Avenue')
+
+
+
+sf1 = SightFund.create(sight_id: 1)
+

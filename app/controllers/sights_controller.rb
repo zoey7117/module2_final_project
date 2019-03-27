@@ -1,6 +1,6 @@
 class SightsController < ApplicationController
 
-  # GET /sights
+
   def index
     @sights = Sight.all
   end
@@ -16,14 +16,8 @@ class SightsController < ApplicationController
     end
   end
 
-
   def new
     @sight = Sight.new
-
-  end
-
-  def edit
-    set_sight
   end
 
   def create
@@ -36,17 +30,9 @@ class SightsController < ApplicationController
     end
   end
 
-
-  def update
-    set_sight
-
-  end
-
-
   def destroy
     set_sight
     @sight.destroy
-
   end
 
   private

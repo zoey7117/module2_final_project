@@ -2,9 +2,7 @@ Rails.application.routes.draw do
 
   resources :donations
   resources :sight_funds
-  resources :appointments
   resources :events
-  resources :favorites
   resources :sights
   resources :users
   root to: 'pages#home'

@@ -13,10 +13,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def edit
-    set_user
-  end
-
   def create
     @user = User.create(user_params)
     session[:user_id] = @user.id

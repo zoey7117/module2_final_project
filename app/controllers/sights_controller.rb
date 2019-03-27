@@ -5,25 +5,27 @@ class SightsController < ApplicationController
     @sights = Sight.all
   end
 
-  # GET /sights/1
   def show
     set_sight
-    @users = User.all
     @favorite = Favorite.create(user_id: current_user.id, sight_id: set_sight.id)
+    if @favorite.valid?
+      user_path(current_user)
+    else
+      flash[:notice] = @favorite.errors.full_messages
+      sights_path(@favorite)
+    end
   end
 
-  # GET /sights/new
+
   def new
     @sight = Sight.new
 
   end
 
-  # GET /sights/1/edit
   def edit
     set_sight
   end
 
-  # POST /sights
   def create
     @sight = Sight.create(sight_params)
     if @sight.valid?
@@ -48,12 +50,10 @@ class SightsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_sight
       @sight = Sight.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def sight_params
       params.require(:sight).permit(:name, :location)
     end

@@ -7,7 +7,15 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @appointment = Appointment.create(user_id: current_user.id, event_id: set_event.id)
+    if @appointment.valid?
+      user_path(current_user)
+    else
+      flash[:notice] = @appointment.errors.full_messages
+      events_path(@appointment)
+    end
   end
+
+
 
   def new
     @event = Event.new

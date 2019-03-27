@@ -22,3 +22,5 @@ e2 = Event.create(name: "High Line Hat Party", date: "6/13/19", time: "8", sight
 e3 = Event.create(name: "Mooncake Collective", date: "7/17/19", time: "8", sight_id: 3)
 e4 = Event.create(name: "Out of Line: Antonio Ramos", date: "6/19/19", time: "8", sight_id: 4)
 e5 = Event.create(name: "Out of Line: A.R.M", date: "8/14/19", time: "8", sight_id: 5)
+
+sf1 = SightFund.create(sight_id: 1)

@@ -1,0 +1,8 @@
+<h4><%= @sight_fund.sight.name %></h4>
+
+<%= form_for @donation do |f| %>
+  <%= f.hidden_field :user_id, value: @current_user_id %>
+  Pledge amount: $<%= f.number_field :amount %>
+  <%= f.hidden_field :sight_fund_id, value: @sight_fund.id %>
+  <%= f.submit %>
+<% end %>

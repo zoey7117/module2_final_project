@@ -29,4 +29,4 @@ e5 = Event.create(name: "Out of Line: A.R.M", date: "8/14/19", time: "8", sight_
 
 
 sf1 = SightFund.create(sight_id: 1)
-
+sf2 = SightFund.create(sight_id: 2)

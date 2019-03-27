@@ -3,7 +3,12 @@ class DonationsController < ApplicationController
 
   def create
     @donation = Donation.create(donation_params)
-    redirect_to user_path(current_user)
+    if @donation.valid?
+      user_path(current_user)
+    else
+      flash[:notice] = @donation.errors.full_messages
+      new_donation_path
+    end
   end
 
   private

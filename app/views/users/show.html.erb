@@ -1,19 +1,19 @@
 
 <h3> hi <%= @user.name %>!</h3>
 
-<h4>Your favorite sights</h4>
+<h4>Your Favorite High Line Sights</h4>
 <ul>
   <% @user.sights.each do |user_sight| %>
   <li><%= user_sight.name %></li>
   <%end %>
 </ul>
-<h4>Your upcoming events</h4>
+<h4>Your Upcoming Events</h4>
 <ul>
   <% @user.events.each do |user_event| %>
   <li><%= user_event.name %></li>
   <%end %>
 </ul>
-<h4>Your site funds</h4>
+<h4>Your High Line Site Funding</h4>
 <ul>
   <% @user.sight_funds.each do |sight_fund| %>
   <li><%= sight_fund.sight.name %></li>
@@ -21,7 +21,17 @@
   <%end %>
 </ul>
 
+<h4>Analytics</h4>
 
+
+<h5>Your Total Donations</h5>
+  <% total_donations = 0 %>
+  <% @user.sight_funds.each do |sight_fund| %>
+    <% total_donations += sight_fund.donation.amount %>
+  <% end %>
+  <%= total_donations %>
+<h5>Your High Line Event Attendance in the Past Year</h5>
+  <%  %>
 <%=button_to 'all da events', events_path, method: :get %>
 <%=button_to 'all da sights', sights_path, method: :get %>
 <%= button_to 'Logout', logout_path, method: :delete %>
@@ -29,6 +39,7 @@
 <% if current_user.id == @user.id %>
   <%= button_to 'Delete this Account', user_path(@user), method: :delete, data: { confirm: 'are you sure?' } %>
 <% end %>
+
 
 
 

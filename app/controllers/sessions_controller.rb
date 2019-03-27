@@ -1,23 +1,24 @@
 class SessionsController < ApplicationController
-  # skip_before_action :authorized, only: [:new, :create]
+  skip_before_action :authorized, only: [:new, :create]
 
   def new
-    render 'new'
+    render :new
   end
 
   def create
     @user = User.find_by(name: params[:name])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to user_path(@user)
+      redirect_to @user
     else
       flash[:message] = 'Invalid name or password'
       redirect_to login_path
     end
   end
 
-  def delete
+  def destroy
     session.delete(:user_id)
+    flash[:message] = 'You logged out'
     redirect_to login_path
   end
 

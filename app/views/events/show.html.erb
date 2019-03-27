@@ -1,24 +1,6 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @event.name %></h1>
+<div> Going to this event? Mark it as one of your appointments. </div>
+<% @appointment %>
+<%= link_to "add appointment", user_path(current_user) %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @event.time %>
-</p>
-
-<p>
-  <strong>Sight:</strong>
-  <%= @event.sight_id %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

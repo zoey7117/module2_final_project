@@ -1,14 +1,8 @@
-<p id="notice"><%= notice %></p>
+<h3>single sight</h3>
 
-<p>
-  <strong>Name:</strong>
-  <%= @sight.name %>
-</p>
+<li>sight name: <%= @sight.name %></li>
+<li>sight location: <%= @sight.location %></li>
+<% @favorite %>
 
-<p>
-  <strong>Location:</strong>
-  <%= @sight.location %>
-</p>
 
-<%= link_to 'Edit', edit_sight_path(@sight) %> |
-<%= link_to 'Back', sights_path %>
+<%= link_to 'add to favorites', user_path(current_user) %>

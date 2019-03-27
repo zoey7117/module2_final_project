@@ -1,0 +1,7 @@
+
+<%= form_for @user do |f| %>
+  <%= f.collection_select :sight_ids, @sights, :id, :name %>
+  <%= f.submit 'Submit',  data: { disable_with: false } %>
+
+
+<% end %>

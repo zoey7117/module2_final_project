@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_25_153136) do
+ActiveRecord::Schema.define(version: 2019_03_27_170722) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer "user_id"
@@ -19,17 +19,34 @@ ActiveRecord::Schema.define(version: 2019_03_25_153136) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "donations", force: :cascade do |t|
+    t.integer "sight_fund_id"
+    t.integer "user_id"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "name"
-    t.integer "date"
-    t.integer "time"
+    t.date "date"
+    t.time "time"
+    t.integer "sight_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "description"
+    t.string "image_url"
+    t.string "location"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
     t.integer "sight_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.integer "user_id"
+  create_table "sight_funds", force: :cascade do |t|
     t.integer "sight_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,6 +57,9 @@ ActiveRecord::Schema.define(version: 2019_03_25_153136) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
+    t.integer "rating"
+    t.string "image_url"
   end
 
   create_table "users", force: :cascade do |t|

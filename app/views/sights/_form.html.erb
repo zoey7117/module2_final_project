@@ -1,27 +1,18 @@
-<%= form_with(model: sight, local: true) do |form| %>
-  <% if sight.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(sight.errors.count, "error") %> prohibited this sight from being saved:</h2>
 
-      <ul>
-      <% sight.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+<% if flash[:notice]%>
+  <% flash[:notice].each do |error|%>
+  <%=error%>
+  <% end%>
+<% end%>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-  </div>
+<%= form_for @sight do |f| %>
+  <%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :location %>
+<%= f.text_field :location %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= f.submit %>
+
+
 <% end %>

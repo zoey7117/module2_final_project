@@ -1,5 +1,8 @@
 <div class="ui secondary pointing menu">
   <a class="item">
+    <%=link_to 'Home', user_path(current_user), method: :get %>
+  </a>
+  <a class="item">
     <%=link_to 'Events', events_path, method: :get %>
   </a>
   <a class="item">
@@ -15,11 +18,9 @@
   </div>
 </div>
 
-<h3>single sight</h3>
-
-<li>sight name: <%= @sight.name %></li>
-<li>sight location: <%= @sight.location %></li>
-<% @favorite %>
+<h1><%= @sight.name %></h1>
+<%= image_tag "/assets/#{@sight.image_url}" %>
+<h2><%= @sight.description %></h2>
 
 
-<%= link_to 'add to favorites', user_path(current_user) %>
+<%= link_to 'add this sight to your favorites', user_path(current_user) %>

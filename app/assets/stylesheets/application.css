@@ -1,16 +1,69 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
+.header {
+color: gray;
+font-size: .5 em;
+ }
 
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+ h1 {
+   color: gray;
+   font-family: sans-serif;
+   font-size: .5 em;
+ }
+
+ h4 {
+
+   color:gray;
+   font-family: sans-serif;
+ }
+
+ h3 {
+   color:gray;
+   font-family: sans-serif;
+
+ }
+
+ p {
+   font-family: sans-serif;
+   font-size: 1 em;
+ }
+
+ a:link, a:visited {
+   background-color: white;
+   color:  gray;
+   /* padding: 20px ; */
+   margin: 40px 10px 10px 10px;
+
+   /* text-align: center; */
+   text-decoration: none;
+   border-style: none;
+  font-family: sans-serif;
+  font-size: 20px;
+   display: inline-block;
+   text-transform: uppercase;
+   letter-spacing: 10px;
+   line-height: 175%;
+
+
+ }
+
+ a:hover, a:active {
+   color:  red;
+ }
+
+ button {
+  padding: 15px;
+}
+
+button a {
+  text-decoration: none;
+  font-size: 20px;
+  color: green;
+}
+
+ .row {
+   display: flex;
+ }
+
+ .column {
+   flex: 33.33%;
+   padding: 5px;
+ }

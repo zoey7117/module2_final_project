@@ -1,6 +1,9 @@
+
+
 <h1><%= @event.name %></h1>
 <div> Going to this event? Mark it as one of your appointments. </div>
 <% @appointment %>
 <%= link_to "add appointment", user_path(current_user) %>
 
 <%= link_to 'Back', events_path %>
+</div>

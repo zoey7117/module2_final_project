@@ -3,6 +3,13 @@ color: gray;
 font-size: .5 em;
  }
 
+ .wrapper {
+   border: 5px solid black;
+   width: 1280px;
+   padding: 20px;
+   margin:50px ;
+
+
  h1 {
    color: gray;
    font-family: sans-serif;
@@ -26,7 +33,9 @@ font-size: .5 em;
    font-size: 1 em;
  }
 
- a:link, a:visited {
+
+a:link   a:visited
+ {
    background-color: white;
    color:  gray;
    /* padding: 20px ; */
@@ -36,28 +45,20 @@ font-size: .5 em;
    text-decoration: none;
    border-style: none;
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 20px ;
    display: inline-block;
-   text-transform: uppercase;
-   letter-spacing: 10px;
-   line-height: 175%;
+   text-transform: uppercase ;
+   letter-spacing: 10px ;
+   line-height: 175% ;
 
 
  }
 
- a:hover, a:active {
-   color:  red;
+a:hover   a:active
+{
+   color:  red ;
  }
 
- button {
-  padding: 15px;
-}
-
-button a {
-  text-decoration: none;
-  font-size: 20px;
-  color: green;
-}
 
  .row {
    display: flex;

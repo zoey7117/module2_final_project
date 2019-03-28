@@ -22,7 +22,7 @@
   <% @sights.each do |sight|%>
   <li class="grid_index_data">
     <%= link_to sight_path(sight) do %>
-      <%= image_tag "/assets/#{sight.image_url}" %>
+      <%= image_tag "/assets/#{sight.image_url}", class: 'sight_image' %>
       <h4><%= sight.name %></h4>
     <% end %>
   </li>

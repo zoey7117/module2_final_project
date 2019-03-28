@@ -73,3 +73,74 @@ a:link   a:visited
    display-template-columns: 30% 30% 30% 30% 30%;
    display-template-rows: 30% 30% 30% 30% 30%;
  }
+ /************ sights ************/
+ .image-gallery {
+   display: grid;
+
+ height: 100px;
+ width: 100px
+ grid-template-columns: minmax(100px, 1fr);
+   /* grid-template-rows: repeat(3, 1fr); */
+   grid-gap: 10px;
+ }
+ }
+ .header {
+   height: 400px;
+   background-image: url('./images/background.png');
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+ }
+
+
+ .simple_form div.input {
+   margin-bottom: 10px;
+   clear: both; /* Required for Webkit, but not for Gecko */
+ }
+
+ .simple_form label {
+   float: left;
+   width: 100px;
+   text-align: right;
+   margin: 2px 10px;
+ }
+
+
+ .field_with_errors {
+   background-color: #ff3333;
+ }
+
+ .simple_form .error {
+   clear: left;
+   color: black;
+   display: block;
+   margin-left: 120px;
+ }
+
+ .simple_form .hint {
+   clear: left;
+   margin-left: 120px;
+   color: #555;
+   display: block;
+   font-style: italic;
+ }
+ .ui secondary pointing menu .item {
+
+ }
+
+ .grid_index {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 50% 50%;
+ }
+
+ /* .grid_index_data {
+   width: 100%;
+ } */
+
+ .sight_image {
+   height: 200px;
+   width: 200px;
+ }

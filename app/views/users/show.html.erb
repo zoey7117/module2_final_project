@@ -1,3 +1,20 @@
+<div class="ui secondary pointing menu">
+  <a class="item">
+    <%=link_to 'Events', events_path, method: :get %>
+  </a>
+  <a class="item">
+    <%=link_to 'Sights', sights_path, method: :get %>
+  </a>
+  <a class="item">
+    <%=link_to 'Donate', sight_funds_path, method: :get%>
+  </a>
+  <div class="right menu">
+    <a class="ui item">
+      <%=link_to 'Logout', logout_path, method: :delete %>
+    </a>
+  </div>
+</div>
+
 
 <h3> hi <%= @user.name %>!</h3>
 
@@ -50,10 +67,10 @@
   <%= total_donations %>
 <h5>Your High Line Event Attendance in the Past Year</h5>
   <%  %>
-<%=button_to 'all da events', events_path, method: :get %>
-<%=button_to 'all da sights', sights_path, method: :get %>
-<%=button_to 'donate to an ongoing project', sight_funds_path, method: :get%>
-<%=button_to 'Logout', logout_path, method: :delete %>
+
+
+
+
 
 <% if current_user.id == @user.id %>
   <%= button_to 'Delete this Account', user_path(@user), method: :delete, data: { confirm: 'are you sure?' } %>

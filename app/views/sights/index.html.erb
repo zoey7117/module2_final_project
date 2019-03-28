@@ -1,5 +1,8 @@
 <div class="ui secondary pointing menu">
   <a class="item">
+    <%=link_to 'Home', user_path(current_user), method: :get %>
+  </a>
+  <a class="item">
     <%=link_to 'Events', events_path, method: :get %>
   </a>
   <a class="item">
@@ -15,12 +18,15 @@
   </div>
 </div>
 
-<ul>
+<div class="grid_index">
   <% @sights.each do |sight|%>
-  <li><%=link_to sight.name, sight%></li>
-  <% end%>
-</ul>
-<%= button_to 'have a new favorite?', new_sight_path, method: :get%>
-
+  <li class="grid_index_data">
+    <%= link_to sight_path(sight) do %>
+      <%= image_tag "/assets/#{sight.image_url}" %>
+      <h4><%= sight.name %></h4>
+    <% end %>
+  </li>
+  <%end%>
+</div>
 
 <%= link_to 'Back', user_path(current_user) %>

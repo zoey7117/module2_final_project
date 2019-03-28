@@ -55,5 +55,15 @@ grid-template-columns: minmax(100px, 1fr);
   font-style: italic;
 }
 .ui secondary pointing menu .item {
-  
+
+}
+
+.grid_index {
+  display: grid;
+  display-template-columns: 30% 30% 30% 30% 30%;
+  display-template-rows: 30% 30% 30% 30% 30%;
+}
+
+.grid_index_data {
+  width: 100%;
 }

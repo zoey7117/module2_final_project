@@ -82,12 +82,12 @@ body {
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-<%= image_tag "/assets/hiline 300.png"%>
+<%= image_tag "hiline 300.png"%>
 </div>
     <div class="flip-card-back">
 
       <br><li><%= link_to "Log in", login_path, class:'link_color'%></li>
-      <li><%= link_to 'create new user', login_path, class:'link_color'%></li>
+      <li><%= link_to 'create new user', new_user_path, class:'link_color'%></li>
 
 
     </div>

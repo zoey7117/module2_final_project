@@ -4,12 +4,12 @@ font-size: .5 em;
  }
 
  .wrapper {
-   border: 5px solid black;
+
    width: 1280px;
    padding: 20px;
-   margin:50px ;
-
-
+   margin: 0 40px;
+	/* position: fixed; */
+s
  h1 {
    color: gray;
    font-family: sans-serif;

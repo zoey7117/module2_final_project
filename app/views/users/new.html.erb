@@ -1,8 +1,29 @@
+
+
 <h3>New User</h3>
 
 
 
-<%= render 'form' %>
+
+
+<%= form_for @user do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br><br>
+
+
+  <%= f.label :password %>
+  <%= f.password_field :password %><br><br>
+
+
+  <%= f.submit %>
+  <!-- <button class="ui button" type="submit">Submit</button> -->
+
+<% end %>
+
+
+
+
 
 
 <%= link_to 'Back', users_path %>

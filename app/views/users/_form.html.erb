@@ -1,14 +1,19 @@
 
 
 
-<div class="simple_form">
+<form class="ui form">
 
 <%= form_for @user do |f| %>
+  <div class="field">
   <%= f.label :name %>
   <%= f.text_field :name %>
+  </div>
+    <div class="field">
   <%= f.label :password %>
   <%= f.password_field :password %>
+  </div>
 
-  <%= f.submit %>
+  <button class="ui button" type="submit">Submit</button>
+</form>
+  <%# <%= f.submit %> %>
 <% end %>
-</div>

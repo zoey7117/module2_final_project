@@ -1,3 +1,20 @@
+<div class="ui secondary pointing menu">
+  <a class="item">
+    <%=link_to 'Events', events_path, method: :get %>
+  </a>
+  <a class="item">
+    <%=link_to 'Sights', sights_path, method: :get %>
+  </a>
+  <a class="item">
+    <%=link_to 'Donate', sight_funds_path, method: :get%>
+  </a>
+  <div class="right menu">
+    <a class="ui item">
+      <%=link_to 'Logout', logout_path, method: :delete %>
+    </a>
+  </div>
+</div>
+
 <h3>single sight</h3>
 
 <li>sight name: <%= @sight.name %></li>

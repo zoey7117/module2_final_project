@@ -1,9 +1,12 @@
+<div class="grid_index">
+  <% @sight_funds.each do |sight_fund|%>
+  <div class="grid_index_data">
+    <%= link_to sight_fund_path(sight_fund) do %>
+      <%= image_tag "/assets/#{sight_fund.sight.image_url}", class: 'sight_fund_image' %>
+      <h4><%= sight_fund.sight.name %> Construction Project</h4>
+    <% end %>
+  </div>
+  <%end%>
+</div>
 
-
-<h4> Projects in Progress </h4>
-<ul>
-  <% @sight_funds.each do |sight_fund| %>
-    <li> <%= link_to sight_fund.sight.name, sight_fund %> -
-    <%= sight_fund.sight.name %> Construction Project </li>
-  <% end %>
-</ul>
+<%= link_to 'Back', user_path(current_user) %>

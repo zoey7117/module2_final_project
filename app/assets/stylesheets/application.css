@@ -133,8 +133,9 @@ a:link   a:visited
 
  .grid_index {
    display: grid;
-   grid-template-columns: 50% 50%;
-   grid-template-rows: 50% 50%;
+   grid-template-columns: 30% 30% 30%;
+   grid-template-rows: 30% 30% 30%;
+   margin-left: 100px;
  }
 
  /* .grid_index_data {
@@ -142,6 +143,16 @@ a:link   a:visited
  } */
 
  .sight_image {
-   height: 200px;
-   width: 200px;
+   height: 300px;
+   width: 300px;
  }
+
+.event_image {
+  height: 300px;
+  width: 300px;
+}
+
+.show_image {
+  height: 1000px;
+  width: 500px
+}

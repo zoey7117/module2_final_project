@@ -24,8 +24,9 @@
 
   <body>
     <div class="wrapper">
-    
+
     <div class="ui secondary pointing menu">
+      <% if current_user != nil %>
       <a class="item">
         <%=link_to 'Home', user_path(current_user), method: :get %>
       </a>
@@ -43,6 +44,7 @@
           <%=link_to 'Logout', logout_path, method: :delete %>
         </a>
       </div>
+      <% end %>
     </div>
 
 

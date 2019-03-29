@@ -1,27 +1,8 @@
-<div class="ui secondary pointing menu">
-  <a class="item">
-    <%=link_to 'Home', user_path(current_user), method: :get %>
-  </a>
-  <a class="item">
-    <%=link_to 'Events', events_path, method: :get %>
-  </a>
-  <a class="item">
-    <%=link_to 'Sights', sights_path, method: :get %>
-  </a>
-  <a class="item">
-    <%=link_to 'Donate', sight_funds_path, method: :get%>
-  </a>
-  <div class="right menu">
-    <a class="ui item">
-      <%=link_to 'Logout', logout_path, method: :delete %>
-    </a>
-  </div>
-</div>
 
 <h1><%= @event.name %></h1>
-<div> Going to this event? Mark it as one of your appointments. </div>
-<% @appointment %>
-<%= link_to "add appointment", user_path(current_user) %>
+<div class="show_image"><%= image_tag "/assets/#{@event.image_url}" %></div>
+<h2><%= @event.description %></h2>
 
-<%= link_to 'Back', events_path %>
+<h2><%= link_to "add to my appointments", user_path(current_user) %></h2>
+
 </div>

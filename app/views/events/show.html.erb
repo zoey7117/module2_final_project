@@ -1,8 +1,8 @@
 
 <h1><%= @event.name %></h1>
-<div class="show_image"><%= image_tag "/assets/#{@event.image_url}" %></div>
+<div><%= image_tag "/assets/#{@event.image_url}",  class: "show_image" %></div>
 <h2><%= @event.description %></h2>
 
-<h2><%= link_to "add to my appointments", user_path(current_user) %></h2>
+<h2><%= link_to "add to my calendar", user_path(current_user) %></h2>
 
 </div>

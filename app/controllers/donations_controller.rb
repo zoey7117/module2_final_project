@@ -9,6 +9,7 @@ class DonationsController < ApplicationController
       flash[:notice] = @donation.errors.full_messages
       new_donation_path
     end
+    redirect_to user_path(current_user)
   end
 
   private

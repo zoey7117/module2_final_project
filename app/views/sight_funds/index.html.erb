@@ -1,4 +1,4 @@
-<div class="grid_index">
+<div class="grid_index_large">
   <% @sight_funds.each do |sight_fund|%>
   <div class="grid_index_data">
     <%= link_to sight_fund_path(sight_fund) do %>
@@ -8,5 +8,3 @@
   </div>
   <%end%>
 </div>
-
-<%= link_to 'Back', user_path(current_user) %>

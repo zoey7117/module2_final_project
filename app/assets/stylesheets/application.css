@@ -133,11 +133,10 @@ a:link   a:visited
 
  .grid_index {
    height:100%;
-   width: 80%;
-   margin-left: 10%;
+   width: 100%;
    display: grid;
-   grid-template-columns: 30% 30% 30%;
-   grid-template-rows: 30% 30% 30% 30%;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
  }
 
 .grid_index_large {
@@ -157,7 +156,6 @@ a:link   a:visited
  .sight_image {
    width:80%;
    height:80%;
-   object-fit: contain;
  }
 
  .sight_fund_image {

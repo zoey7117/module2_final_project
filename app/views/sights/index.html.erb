@@ -1,13 +1,10 @@
 <div class="grid_index">
   <% @sights.each do |sight|%>
-  <div class="grid_index_data">
-    <%= link_to sight_path(sight) do %>
-      <%= image_tag "/assets/#{sight.image_url}", class: 'sight_image' %>
-      <h4><%= sight.name %></h4>
+  <li class="grid_index_data">
+    <j2><%= link_to sight_path(sight) do %></j2>
+    <%= image_tag "/assets/#{sight.image_url}", class: 'sight_image' %>
+      <j2><%= sight.name %></j2>
     <% end %>
   </div>
   <%end%>
-</div>
-<div>
-<%= link_to 'Back', user_path(current_user) %>
 </div>

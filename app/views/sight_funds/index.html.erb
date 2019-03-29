@@ -1,9 +1,10 @@
 
-
+<div class='box'>
+  </div>
 <h4> Projects in Progress </h4>
 <ul>
   <% @sight_funds.each do |sight_fund| %>
-    <li> <%= link_to sight_fund.sight.name, sight_fund %> -
-    <%= sight_fund.sight.name %> Construction Project </li>
+    <j2><li> <%= link_to sight_fund.sight.name, sight_fund %> -
+    <%= sight_fund.sight.name %> Construction Project </li></j2>
   <% end %>
 </ul>

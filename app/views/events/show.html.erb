@@ -1,27 +1,9 @@
-<div class="ui secondary pointing menu">
-  <a class="item">
-    <%=link_to 'Home', user_path(current_user), method: :get %>
-  </a>
-  <a class="item">
-    <%=link_to 'Events', events_path, method: :get %>
-  </a>
-  <a class="item">
-    <%=link_to 'Sights', sights_path, method: :get %>
-  </a>
-  <a class="item">
-    <%=link_to 'Donate', sight_funds_path, method: :get%>
-  </a>
-  <div class="right menu">
-    <a class="ui item">
-      <%=link_to 'Logout', logout_path, method: :delete %>
-    </a>
+
+<div class='box'>
   </div>
-</div>
+<j1><%= @event.name %></j1> <br><br>
 
-<h1><%= @event.name %></h1>
-<div> Going to this event? Mark it as one of your appointments. </div>
+<j4>Going to this event?</j4> <br>
+<j2>  Mark it as one of your appointments. </j2><br><br>
 <% @appointment %>
-<%= link_to "add appointment", user_path(current_user) %>
-
-<%= link_to 'Back', events_path %>
-</div>
+<%= link_to "add appointment", user_path(current_user) %><br>

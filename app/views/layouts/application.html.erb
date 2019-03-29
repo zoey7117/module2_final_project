@@ -6,7 +6,9 @@
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Lekton|Playfair+Display|Six+Caps|Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -24,9 +26,10 @@
 
   <body>
     <div class="wrapper">
-    
+
     <div class="ui secondary pointing menu">
-      <a class="item">
+      <% if current_user != nil %>
+  <a class="item">
         <%=link_to 'Home', user_path(current_user), method: :get %>
       </a>
       <a class="item">
@@ -43,6 +46,7 @@
           <%=link_to 'Logout', logout_path, method: :delete %>
         </a>
       </div>
+    <% end %>
     </div>
 
 

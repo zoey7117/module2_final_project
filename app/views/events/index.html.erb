@@ -1,10 +1,9 @@
-
+<div class='box'>
+  </div>
 
 <ul>
   <% @events.each do |event| %>
-    <li> <%= link_to event.name, event %>
-    <%= event.sight.name %> </li>
+    <j2><li> <%= link_to event.name, event %>
+    <%= event.sight.name %> </li></j2>
   <% end %>
 </ul>
-
-<%= link_to 'Back', user_path(current_user) %>

@@ -1,48 +1,56 @@
+<div>
+ <div class='box_users'>
+  <%= image_tag("background.png")%>
+</div>
 
 
+<div class="user_info">
+<j3> Hi <%= @user.name %>! </j3><br>
+<hr>
+  <j4>Welcome to your High Line dashboard!</j4><br>
+  <hr><br>
 
-<h3> Hi <%= @user.name %>! Welcome to your High Line dashboard!</h3>
-
-<j1>Your Favorite High Line Sights</j1>
+<h4>Your Favorite High Line Sights</h4>
 <ul>
   <% @user.sights.each do |user_sight| %>
-  <li><%= user_sight.name %></li>
+  <j2><li><%= user_sight.name %></li></j2>
   <%end %>
 </ul>
 <h4>Your Upcoming Events</h4>
 <ul>
   <% @user.events.each do |user_event| %>
-  <li><%= user_event.name %></li>
+  <j2><li><%= user_event.name %></li></j2>
   <%end %>
 </ul>
 <h4>Your High Line Site Funding</h4>
 <ul>
   <% @user.sight_funds.each do |sight_fund| %>
-  <li><%= sight_fund.sight.name %></li>
+  <j2><li><%= sight_fund.sight.name %></li></j2>
   <% sight_fund.donations.each do |dono| %>
-    <%= dono.amount %>
+    <%= dono.amount %><br>
     <%end%>
   <%end%>
 </ul>
 
+<j4>Analytics</j4><br>
 
 
-
-<h4>Analytics</h4>
-
-
-<h5>Your Total Donations</h5>
-  <% total_donations = 0 %>
+<h4>Your Total Donations</h4><br>
+  <% total_donations = 0 %><br>
   <% @user.sight_funds.each do |sight_fund| %>
     <% sight_fund.donations.each do |dono| %>
       <% total_donations += dono.amount %>
     <% end %>
   <% end %>
-  <%= total_donations %>
-<h5>Your High Line Event Attendance in the Past Year</h5>
-  <%  %>
+  <%= total_donations %><br>
+<h4>Your High Line Event Attendance<br>
+  in the Past Year</h4>
+</div>
+</div>
+<div>
+
 
 
 <% if current_user.id == @user.id %>
-  <%= button_to 'Delete this Account', user_path(@user), method: :delete, data: { confirm: 'are you sure?' } %>
+  <%= link_to 'Delete this Account', user_path(@user), method: :delete, data: { confirm: 'are you sure?' } %>
 <% end %>

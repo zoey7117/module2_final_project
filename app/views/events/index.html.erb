@@ -1,4 +1,7 @@
-<<<<<<< HEAD
+
+           <div class='box'>
+  </div>
+
 <div class="grid_index">
   <% @events.each do |event|%>
   <div class="grid_index_data">
@@ -10,15 +13,3 @@
   <%end%>
 </div>
 
-<%= link_to 'Back', user_path(current_user) %>
-=======
-<div class='box'>
-  </div>
-
-<ul>
-  <% @events.each do |event| %>
-    <j2><li> <%= link_to event.name, event %>
-    <%= event.sight.name %> </li></j2>
-  <% end %>
-</ul>
->>>>>>> another

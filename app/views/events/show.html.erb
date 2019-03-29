@@ -1,9 +1,10 @@
 
-<div class='box'>
-  </div>
-<j1><%= @event.name %></j1> <br><br>
 
-<j4>Going to this event?</j4> <br>
-<j2>  Mark it as one of your appointments. </j2><br><br>
-<% @appointment %>
-<%= link_to "add appointment", user_path(current_user) %><br>
+   <div class='box'>
+  </div>
+<h1><%= @event.name %></h1>
+<div><%= image_tag "/assets/#{@event.image_url}",  class: "show_image" %></div>
+<h2><%= @event.description %></h2>
+
+<h2><%= link_to "add to my calendar", user_path(current_user) %></h2>
+

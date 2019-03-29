@@ -5,7 +5,10 @@ font-family: 'Barlow', sans-serif;
 font-family: 'Six Caps', sans-serif;
 font-family: 'Lekton', sans-serif;
 font-family: 'Playfair Display', serif; */
-
+.bkgrd_photo{
+  width: 100%;
+  height: 100%;
+}
 .box_users {
   width: 600px;
   height: 655px;
@@ -30,6 +33,12 @@ font-size: .5 em;
    width: 100%;
    padding: 20px;
    text-align: center;
+ }
+ .wrapper1  {
+
+   width: 1280px;
+   padding: 20px;
+   margin: 0 40px;
  }
 
  .ui grid {
@@ -121,8 +130,8 @@ a:link   a:visited
 
  .grid_index {
    display: grid;
-   display-template-columns: 30% 30% 30% 30% 30%;
-   display-template-rows: 30% 30% 30% 30% 30%;
+   display-template-columns: 30% 30% 30% ;
+   display-template-rows: 30% 30% 30% ;
  }
  /************ sights ************/
  .image-gallery {

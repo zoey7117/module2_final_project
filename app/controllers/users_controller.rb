@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :authorized, only: [:new, :create]
+  layout 'wrapper1', only: :show
 
   def index
     @users = User.all

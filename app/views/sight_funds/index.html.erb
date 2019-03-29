@@ -1,10 +1,13 @@
+<div class='box'>
+  </div>
 <div class="grid_index_large">
   <% @sight_funds.each do |sight_fund|%>
   <div class="grid_index_data">
-    <%= link_to sight_fund_path(sight_fund) do %>
+    <j2><li> <%= link_to sight_fund.sight.name, sight_fund %> -
       <%= image_tag "/assets/#{sight_fund.sight.image_url}", class: 'sight_fund_image' %>
-      <h4><%= sight_fund.sight.name %> Construction Project</h4>
+      <j2><li><%= sight_fund.sight.name %> Construction Project</li></j2>
     <% end %>
   </div>
   <%end%>
 </div>
+

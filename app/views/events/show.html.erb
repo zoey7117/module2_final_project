@@ -1,8 +1,10 @@
 
+
+   <div class='box'>
+  </div>
 <h1><%= @event.name %></h1>
 <div><%= image_tag "/assets/#{@event.image_url}",  class: "show_image" %></div>
 <h2><%= @event.description %></h2>
 
 <h2><%= link_to "add to my calendar", user_path(current_user) %></h2>
 
-</div>

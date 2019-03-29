@@ -1,3 +1,25 @@
+/* font-family: 'Ultra', serif; */
+/* font-family: 'Barlow', sans-serif; */
+/* font-family: 'Ultra', serif;
+font-family: 'Barlow', sans-serif;
+font-family: 'Six Caps', sans-serif;
+font-family: 'Lekton', sans-serif;
+font-family: 'Playfair Display', serif; */
+
+.box_users {
+  width: 600px;
+  height: 655px;
+  margin-right: 50px;
+  float: left;
+  display: flex;
+  padding-bottom: 200px;
+  padding-right: 50px;
+}
+
+.box {
+  height: 20px;
+}
+
 .header {
 color: gray;
 font-size: .5 em;
@@ -10,22 +32,50 @@ font-size: .5 em;
    text-align: center;
  }
 
+ .ui grid {
+   margin-top: 50px;
+ }
+
  h1 {
    color: gray;
-   font-family: sans-serif;
+   font-family: 'Lekton', sans-serif;
    font-size: .5 em;
  }
 
  j1 {
 
-   color:gray;
+   font-family: 'Ultra', serif;
+
+   font-size: 30px;
+   color: grey
+
+ }
+j2{
+  color:black;
+  font-family: 'Lekton', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.2;
+
+
+}
+ j3 {
+
+   font-family: 'Ultra', serif;
+   font-size: 70px;
+   color: grey
+
+ }
+ j4 {
    font-family: sans-serif;
-   letter-spacing: 10px;
+   text-transform: uppercase;
+   font-weight: bold;
+   letter-spacing: 5px;
  }
 
- h3 {
-   color:gray;
-   font-family: sans-serif;
+ .user_info {
+   margin: 50px;
+ }
+ hr {
 
  }
 
@@ -38,7 +88,7 @@ font-size: .5 em;
 a:link   a:visited
  {
    background-color: white;
-   color:  gray;
+   color:  gray !important;
    /* padding: 20px ; */
    margin: 40px 10px 10px 10px;
 
@@ -48,7 +98,7 @@ a:link   a:visited
   font-family: sans-serif;
   font-size: 20px ;
    display: inline-block;
-   text-transform: uppercase ;
+   text-transform: uppercase !important;
    letter-spacing: 10px ;
    line-height: 175% ;
 

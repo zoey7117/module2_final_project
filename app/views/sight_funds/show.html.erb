@@ -1,5 +1,9 @@
+
+  <div class='box'>
+  </div>
 <%= image_tag "/assets/#{@sight_fund.sight.image_url}",  class: "show_image" %>
 <h2>Donate to the <%= @sight_fund.sight.name %> Construction Project</h2>
+
 
 <%= form_for @donation do |f| %>
   <%= f.hidden_field :user_id, value: @current_user_id %>

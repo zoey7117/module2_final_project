@@ -7,9 +7,8 @@
   <div class="grid_index_data">
     <%= link_to event_path(event) do %>
       <%= image_tag "/assets/#{event.image_url}", class: 'event_image' %>
-      <h4><%= event.name %></h4>
+      <p><j2><%= event.name %></j2></p>
     <% end %>
   </div>
   <%end%>
 </div>
-
